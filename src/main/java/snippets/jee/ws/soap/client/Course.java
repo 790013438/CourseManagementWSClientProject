@@ -1,4 +1,3 @@
-
 package snippets.jee.ws.soap.client;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -7,9 +6,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>course complex typeµÄ Java Àà¡£
+ * <p>course complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="course">
@@ -40,7 +39,7 @@ public class Course {
     protected String name;
 
     /**
-     * »ñÈ¡creditsÊôĞÔµÄÖµ¡£
+     * è·å–creditså±æ€§çš„å€¼ã€‚
      * 
      */
     public int getCredits() {
@@ -48,7 +47,7 @@ public class Course {
     }
 
     /**
-     * ÉèÖÃcreditsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®creditså±æ€§çš„å€¼ã€‚
      * 
      */
     public void setCredits(int value) {
@@ -56,7 +55,7 @@ public class Course {
     }
 
     /**
-     * »ñÈ¡idÊôĞÔµÄÖµ¡£
+     * è·å–idå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getId() {
@@ -64,7 +63,7 @@ public class Course {
     }
 
     /**
-     * ÉèÖÃidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®idå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setId(int value) {
@@ -72,7 +71,7 @@ public class Course {
     }
 
     /**
-     * »ñÈ¡nameÊôĞÔµÄÖµ¡£
+     * è·å–nameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -84,7 +83,7 @@ public class Course {
     }
 
     /**
-     * ÉèÖÃnameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®nameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
