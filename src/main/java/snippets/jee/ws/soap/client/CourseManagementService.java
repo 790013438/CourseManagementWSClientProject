@@ -27,7 +27,7 @@ public interface CourseManagementService {
 
     /**
      * 
-     * @param arg0
+     * @param courseId
      * @return
      *     returns snippets.jee.ws.soap.client.Course
      */
@@ -37,8 +37,8 @@ public interface CourseManagementService {
     @ResponseWrapper(localName = "getCourseResponse", targetNamespace = "http://soap.ws.jee.snippets/", className = "snippets.jee.ws.soap.client.GetCourseResponse")
     @Action(input = "http://soap.ws.jee.snippets/CourseManagementService/getCourseRequest", output = "http://soap.ws.jee.snippets/CourseManagementService/getCourseResponse")
     public Course getCourse(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
+        @WebParam(name = "courseId", targetNamespace = "")
+        int courseId);
 
     /**
      * 

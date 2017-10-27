@@ -1,4 +1,3 @@
-
 package snippets.jee.ws.soap.client;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -16,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="courseId" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,26 +26,25 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getCourse", propOrder = {
-    "arg0"
+    "courseId"
 })
 public class GetCourse {
 
-    protected int arg0;
+    protected int courseId;
 
     /**
-     * 获取arg0属性的值。
+     * 获取courseId属性的值。
      * 
      */
-    public int getArg0() {
-        return arg0;
+    public int getCourseId() {
+        return courseId;
     }
 
     /**
-     * 设置arg0属性的值。
+     * 设置courseId属性的值。
      * 
      */
-    public void setArg0(int value) {
-        this.arg0 = value;
+    public void setCourseId(int value) {
+        this.courseId = value;
     }
-
 }

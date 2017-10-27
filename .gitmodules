@@ -1,0 +1,3 @@
+[submodule "CourseManagementWSClient"]
+	path = CourseManagementWSClient
+	url = https://github.com/790013438/CourseManagementWS.git
