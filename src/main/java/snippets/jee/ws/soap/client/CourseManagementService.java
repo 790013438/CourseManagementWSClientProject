@@ -1,15 +1,13 @@
 
 package snippets.jee.ws.soap.client;
 
-import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Action;
-import javax.xml.ws.RequestWrapper;
-import javax.xml.ws.ResponseWrapper;
 
 
 /**
@@ -19,37 +17,34 @@ import javax.xml.ws.ResponseWrapper;
  * 
  */
 @WebService(name = "CourseManagementService", targetNamespace = "http://soap.ws.jee.snippets/")
-@XmlSeeAlso({
+@SOAPBinding(style = SOAPBinding.Style.RPC)
+    @XmlSeeAlso({
     ObjectFactory.class
-})
+    })
 public interface CourseManagementService {
 
 
     /**
      * 
-     * @param arg0
+     * @return
+     *     returns snippets.jee.ws.soap.client.Courses
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://soap.ws.jee.snippets/CourseManagementService/getCoursesRequest", output = "http://soap.ws.jee.snippets/CourseManagementService/getCoursesResponse")
+    public Courses getCourses();
+
+    /**
+     * 
+     * @param courseId
      * @return
      *     returns snippets.jee.ws.soap.client.Course
      */
     @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getCourse", targetNamespace = "http://soap.ws.jee.snippets/", className = "snippets.jee.ws.soap.client.GetCourse")
-    @ResponseWrapper(localName = "getCourseResponse", targetNamespace = "http://soap.ws.jee.snippets/", className = "snippets.jee.ws.soap.client.GetCourseResponse")
+    @WebResult(partName = "return")
     @Action(input = "http://soap.ws.jee.snippets/CourseManagementService/getCourseRequest", output = "http://soap.ws.jee.snippets/CourseManagementService/getCourseResponse")
     public Course getCourse(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<snippets.jee.ws.soap.client.Course>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getCourses", targetNamespace = "http://soap.ws.jee.snippets/", className = "snippets.jee.ws.soap.client.GetCourses")
-    @ResponseWrapper(localName = "getCoursesResponse", targetNamespace = "http://soap.ws.jee.snippets/", className = "snippets.jee.ws.soap.client.GetCoursesResponse")
-    @Action(input = "http://soap.ws.jee.snippets/CourseManagementService/getCoursesRequest", output = "http://soap.ws.jee.snippets/CourseManagementService/getCoursesResponse")
-    public List<Course> getCourses();
+            @WebParam(name = "courseId", partName = "courseId")
+            int courseId);
 
 }

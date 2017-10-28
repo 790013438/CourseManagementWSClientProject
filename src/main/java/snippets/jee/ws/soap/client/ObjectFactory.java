@@ -24,10 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetCourses_QNAME = new QName("http://soap.ws.jee.snippets/", "getCourses");
-    private final static QName _GetCourseResponse_QNAME = new QName("http://soap.ws.jee.snippets/", "getCourseResponse");
-    private final static QName _GetCourse_QNAME = new QName("http://soap.ws.jee.snippets/", "getCourse");
-    private final static QName _GetCoursesResponse_QNAME = new QName("http://soap.ws.jee.snippets/", "getCoursesResponse");
+    private final static QName _Courses_QNAME = new QName("http://soap.ws.jee.snippets/", "courses");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: snippets.jee.ws.soap.client
@@ -37,35 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetCourseResponse }
+     * Create an instance of {@link Courses }
      * 
      */
-    public GetCourseResponse createGetCourseResponse() {
-        return new GetCourseResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetCourses }
-     * 
-     */
-    public GetCourses createGetCourses() {
-        return new GetCourses();
-    }
-
-    /**
-     * Create an instance of {@link GetCoursesResponse }
-     * 
-     */
-    public GetCoursesResponse createGetCoursesResponse() {
-        return new GetCoursesResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetCourse }
-     * 
-     */
-    public GetCourse createGetCourse() {
-        return new GetCourse();
+    public Courses createCourses() {
+        return new Courses();
     }
 
     /**
@@ -77,39 +50,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetCourses }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Courses }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://soap.ws.jee.snippets/", name = "getCourses")
-    public JAXBElement<GetCourses> createGetCourses(GetCourses value) {
-        return new JAXBElement<GetCourses>(_GetCourses_QNAME, GetCourses.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetCourseResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://soap.ws.jee.snippets/", name = "getCourseResponse")
-    public JAXBElement<GetCourseResponse> createGetCourseResponse(GetCourseResponse value) {
-        return new JAXBElement<GetCourseResponse>(_GetCourseResponse_QNAME, GetCourseResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetCourse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://soap.ws.jee.snippets/", name = "getCourse")
-    public JAXBElement<GetCourse> createGetCourse(GetCourse value) {
-        return new JAXBElement<GetCourse>(_GetCourse_QNAME, GetCourse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetCoursesResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://soap.ws.jee.snippets/", name = "getCoursesResponse")
-    public JAXBElement<GetCoursesResponse> createGetCoursesResponse(GetCoursesResponse value) {
-        return new JAXBElement<GetCoursesResponse>(_GetCoursesResponse_QNAME, GetCoursesResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.ws.jee.snippets/", name = "courses")
+    public JAXBElement<Courses> createCourses(Courses value) {
+        return new JAXBElement<Courses>(_Courses_QNAME, Courses.class, null, value);
     }
 
 }
